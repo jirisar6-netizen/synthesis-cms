@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/images"
+public_folder: "/images"
+collections:
+  - name: "clanky"
+    label: "Články"
+    folder: "content/clanky"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titulek", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Obsah", name: "body", widget: "markdown" }
+      - { label: "GPU Náročnost", name: "gpu_narocnost", widget: "boolean", default: false }
